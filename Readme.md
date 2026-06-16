@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [bob-TPAKTOPUCT!](https://up.htmlacademy.ru/adaptive-individual/3/user/554915).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
 
 ---
 
