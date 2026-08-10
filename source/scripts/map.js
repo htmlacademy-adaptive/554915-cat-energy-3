@@ -1,15 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const mapContainer = document.querySelector('.contacts__map-container');
   const imageContainer = document.querySelector('.contacts__image-container');
-  // const isAvailableJS = document.documentElement.classList.contains('page--no-js');
 
   if (!mapContainer) {
     return;
   }
-
-  // if (isAvailableJS) {
-  //   return;
-  // }
 
   const ymaps = window.ymaps;
 
@@ -21,17 +16,23 @@ document.addEventListener('DOMContentLoaded', () => {
     imageContainer.replaceWith(yaMapContainer);
 
     const myMap = new ymaps.Map('map', {
-        center: [59.938679, 30.3230044],
-        zoom: 14,
-        controls: []
-      }),
+      center: [59.938679, 30.3230044],
+      zoom: 14,
+      controls: []
+    });
 
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
-        iconLayout: 'default#image',
-        iconImageHref: '../icons/stack.svg#icon-pin',
-        iconImageSize: [57, 53],
-        iconImageOffset: [-26, -42]
-      });
+    const isTablet = window.innerWidth >= 768;
+
+    const iconSize = isTablet ? [113, 106] : [57, 53];
+    const iconOffset = isTablet ? [-56, -95] : [-26, -42];
+
+
+    const myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+      iconLayout: 'default#image',
+      iconImageHref: '../icons/stack.svg#icon-pin',
+      iconImageSize: iconSize,
+      iconImageOffset: iconOffset
+    });
 
     myMap.geoObjects.add(myPlacemark);
 
