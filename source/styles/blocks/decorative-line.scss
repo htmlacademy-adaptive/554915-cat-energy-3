@@ -1,0 +1,57 @@
+.decorative-line {
+  --line-gap: 20px;
+  position: relative;
+
+  background-color: $bg-color-accent;
+  box-shadow: calc(var(--line-gap) * -1) 0 $bg-color-accent, var(--line-gap) 0 $bg-color-accent;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 49%;
+    right: 0;
+    z-index: -1;
+
+    height: 2px;
+    width: 100vw;
+
+    box-shadow: 100vw 0 $border-color-special;
+  }
+
+  @media (min-width: $tablet-width) {
+    --line-gap: 40px;
+
+    &::before {
+      background-color: $border-color-special;
+    }
+  }
+
+  &--gap-m {
+    --line-gap: 40px;
+  }
+
+  &--align-top-30 {
+    &::before {
+      top: 30%;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::before {
+        top: 61%;
+      }
+    }
+  }
+
+  &--align-top-59 {
+    &::before {
+      top: 59%;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::before {
+        top: 60%;
+      }
+    }
+  }
+}

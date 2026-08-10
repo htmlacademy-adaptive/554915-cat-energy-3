@@ -1,1 +1,47 @@
-/* здесь используйте глобальные переменные */
+
+/* FONT */
+$font-family: "Lato", "Arial", sans-serif;
+$second-family: "Oswald", sans-serif;
+
+/* SCREEN */
+$mobile-width: 320px;
+$tablet-width: 748px;
+$desktop-width: 1260px;
+$mobile-width-only: 747px;
+
+/* TEXT */
+$text-color-accent: #ffffff;
+$text-color-primary: #444444;
+$text-color-secondary: #000000;
+$text-color-secondary-2: #111111;
+$text-color-secondary-3: #222222;
+$text-color-tertiary: #f2f2f2;
+
+/* BG */
+$bg-color-accent: #ffffff;
+$bg-color-base: #f2f2f2;
+$bg-color-base-2: #eaeaea;
+$bg-color-base-3: #ebebeb;
+$bg-color-special: #68b738;
+$bg-color-special-2: #5eaa2f;
+$bg-color-special-3:  rgba(104, 183, 56, 0.85);
+
+/* BORDER */
+$border-color-special: #68b738;
+$border-color-accent: #ffffff;
+
+/* ICON */
+$icon-bg-color: #666666;
+$icon-bg-color-dark: #222222;
+$icon-bg-color-focus: #68b738;
+$icon-bg-color-error: #ff8282;
+
+/* INPUT */
+$input-border-color: #e7e7e7;
+$input-border-color-hover: #cdcdcd;
+$input-border-color-focus: #444444;
+$input-border-color-error: #ff8282;
+
+/* CONTROL */
+$control-border-color: #cdcdcd;
+$control-border-color-hover: #bababa;

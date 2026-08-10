@@ -1,0 +1,154 @@
+.form-fieldset {
+  display: flex;
+  flex-direction: column;
+  row-gap: 34px;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 57px;
+  }
+}
+
+.form-fieldset--decorative-line {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 50%;
+
+      height: 1px;
+      width: 100vw;
+
+      background-color: #d9d9d9;
+      transform: translateX(-50%);
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+
+.form-fieldset--gap-m {
+  row-gap: 38px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 76px;
+  }
+}
+
+.form-fieldset--gap-l {
+  row-gap: 40px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    row-gap: 78px;
+  }
+}
+
+.form-fieldset__field-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 14px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 20px;
+  }
+}
+
+.form-fieldset__field-group--layout-grid {
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+.form-fieldset__radio-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px;
+}
+
+.form-fieldset__checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 13px;
+
+  margin-top: 1px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 60px;
+
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 78px;
+  }
+}
+
+.form-fieldset__checkbox-group-item {
+  /* pp start */
+  &:nth-child(3),
+  &:nth-child(4) {
+    margin-top: -1px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:nth-child(3) {
+      margin-left: 1px;
+    }
+
+    &:nth-child(4) {
+      margin-left: 1px;
+    }
+  }
+  /* pp end */
+}
+
+.form-fieldset__textarea {
+  min-height: 150px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 175px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 173px;
+  }
+}
+
+.form-fieldset__caption {
+  float: left;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    & br {
+      display: none;
+    }
+  }
+}

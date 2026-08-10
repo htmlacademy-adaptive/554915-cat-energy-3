@@ -1,0 +1,46 @@
+.card-link {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: $text-color-secondary;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+
+    width: 24px;
+    height: 12px;
+
+    background-image: url("./../../icons/icon-arrow.svg");
+    background-repeat: no-repeat;
+
+    transition: width 0.2s ease;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    width: 32px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 25px;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: 0.2px;
+  }
+}

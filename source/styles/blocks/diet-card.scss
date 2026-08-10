@@ -1,0 +1,154 @@
+.diet-card {
+  padding: 30px 20px 19px;
+
+  background-color: $bg-color-base;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+
+    grid-template-columns: 340px 1fr;
+    grid-template-areas:
+      "title ."
+      "text  ."
+      "link  .";
+    padding: 77px 52px 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "text"
+      "link";
+
+    padding-bottom: 64px;
+  }
+
+  &--weight-loss {
+    background-image: url("./../../icons/diet-weight-loss.svg");
+    background-repeat: no-repeat;
+    background-position: 20px 21px;
+    background-size: 50px 53px;
+
+    @media (min-width: $tablet-width) {
+      background-size: 200px 211px;
+      background-position: right 63px top 81px;
+      background-image: url("./../../icons/diet-weight-loss-tablet.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      background-size: 100px 106px;
+      background-position: 52px 41px;
+    }
+  }
+
+  &--weight-gain {
+    background-image: url("./../../icons/diet-weight-gain-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 13px 24px;
+    background-size: 67px 50px;
+
+    @media (max-width: $mobile-width-only) {
+      padding-bottom: 18px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-size: 268px 200px;
+      background-position: right 29px top 91px;
+      background-image: url("./../../icons/diet-weight-gain-tablet.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      background-size: 134px 100px;
+      background-position: 33px 47px;
+      background-image: url("./../../icons/diet-weight-gain-desktop.svg");
+    }
+  }
+}
+
+.diet-card__title {
+  margin: 0;
+  margin-bottom: 30px;
+  margin-left: 70px;
+
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 154%;
+  text-transform: uppercase;
+  color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    grid-area: title;
+
+    margin-bottom: 24px;
+    margin-left: 0;
+
+    font-size: 36px;
+    line-height: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+    margin-left: 162px;
+  }
+}
+
+.diet-card__description {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: text;
+
+    margin-bottom: 0;
+
+    color: $text-color-secondary;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+
+.diet-card--weight-gain .diet-card__description {
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 21px;
+  }
+}
+
+.diet-card__line {
+  @media (max-width: $mobile-width-only) {
+    display: block;
+    width: 100%;
+    height: 1px;
+
+    background-color: #d9d9d9;
+  }
+}
+
+.diet-card__link {
+  margin-top: 19px;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    grid-area: link;
+
+    margin-top: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 32px;
+  }
+}
+
+.diet-card--weight-gain .diet-card__link {
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 32px;
+  }
+}

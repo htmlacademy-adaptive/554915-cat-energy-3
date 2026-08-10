@@ -1,0 +1,12 @@
+.logo-secondary {
+  display: flex;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

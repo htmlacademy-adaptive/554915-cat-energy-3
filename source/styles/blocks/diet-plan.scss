@@ -1,0 +1,68 @@
+.diet-plan {
+  padding-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 79px;
+  }
+}
+
+.diet-plan__headline {
+  padding-top: 27px;
+  padding-bottom: 38px;
+
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      width: 100vw;
+      height: 1px;
+
+      background-color: #d9d9d9;
+      box-shadow: 100vw 0  #d9d9d9;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 34px;
+    padding-bottom: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 44px;
+  }
+}
+
+.diet-plan__title {
+  margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+  }
+}
+
+.diet-plan__text {
+  margin: 0;
+
+  font-family: $second-family;
+  text-transform: uppercase;
+  color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 150%;
+  }
+}

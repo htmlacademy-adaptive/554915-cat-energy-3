@@ -1,0 +1,59 @@
+.newsletters {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 96px;
+    padding-bottom: 104px;
+  }
+}
+
+.newsletters__title {
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 67px;
+    margin-left: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+    margin-left: 0;
+  }
+}
+
+.newsletters__content {
+  @media (min-width: $tablet-width) {
+    width: 632px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 752px;
+  }
+}
+
+.newsletters__description {
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+
+    font-size: 24px;
+    line-height: 133%;
+  }
+}

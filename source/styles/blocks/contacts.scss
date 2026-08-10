@@ -1,0 +1,126 @@
+.contacts {
+  &--theme-accent {
+    background-color: $bg-color-base;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    padding-top: 94px;
+    padding-bottom: 106px;
+  }
+}
+
+.contacts__content {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 165px 160px;
+    justify-content: space-between;
+
+    padding: 61px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 163px 167px;
+
+    position: relative;
+    z-index: 2;
+
+    box-sizing: border-box;
+    width: 565px;
+    padding: 60px 68px 59px 80px;
+
+    background-color: $bg-color-accent;
+    box-shadow: 0 0 15px -3px #000000;
+  }
+}
+
+.contacts__title {
+  margin: 0;
+
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: $text-color-secondary-2;
+
+
+  @media (min-width: $tablet-width) {
+    margin-top: 2px;
+
+    font-size: 20px;
+    line-height: 130%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 2px;
+  }
+}
+
+.contacts__address {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+  }
+}
+
+.contacts__address-text {
+  margin: 0;
+
+  font-style: normal;
+  line-height: 143%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 125%;
+    text-align: right;
+
+    &:nth-child(1) {
+      margin-bottom: 1px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.contacts__map-container {
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+  }
+}
+
+.contacts__ya-map {
+  width: 100%;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
+.contacts__map-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
+  }
+}

@@ -1,0 +1,68 @@
+.checkbox-control {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 113%;
+  text-transform: uppercase;
+  color: inherit;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+
+    font-size: 20px;
+  }
+}
+
+.checkbox-control::before {
+  content: "";
+
+  flex-shrink: 0;
+
+  width: 30px;
+  height: 30px;
+
+  outline: 1px solid $control-border-color;
+  outline-offset: -1px;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.checkbox-control:has(.checkbox-control__input:checked)::before {
+  background-image: url("./../../icons/icon-checkbox.svg");
+  background-size: 18px 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    background-size: 24px 19px;
+  }
+}
+
+.checkbox-control:hover::before {
+  outline-color: $control-border-color-hover;
+}
+
+.checkbox-control:has(.checkbox-control__input:focus-visible) {
+  outline: 3px solid $control-border-color;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.checkbox-control:has(.checkbox-control__input:active) {
+  opacity: 0.3;
+}
+
+.checkbox-control__input {
+  position: absolute;
+
+  appearance: none;
+}

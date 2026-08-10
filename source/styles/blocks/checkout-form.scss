@@ -1,0 +1,136 @@
+.checkout-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "info"
+    "diet"
+    "contacts"
+    "comment"
+    "products"
+    "button";
+  row-gap: 23px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 69px 80px;
+    grid-template-areas:
+      "info     diet"
+      "contacts contacts"
+      "comment  comment"
+      "products products"
+      "button   button";
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.checkout-form__fieldset-info {
+  grid-area: info;
+
+  padding-top: 1px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.checkout-form__fieldset-diet {
+  grid-area: diet;
+
+  padding-top: 23px;
+  padding-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 27px;
+    padding-left: 27px;
+
+    outline: 1px solid #e7e7e7;
+    outline-offset: -1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 25px 28px;
+  }
+}
+
+.checkout-form__fieldset-contacts {
+  grid-area: contacts;
+
+  padding-top: 4px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+  }
+}
+
+.checkout-form__fieldset-comment {
+  grid-area: comment;
+
+  padding-top: 2px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+  }
+}
+
+.checkout-form__fieldset-products {
+  grid-area: products;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 3px;
+  }
+}
+
+.checkout-form__button-wrapper {
+  grid-area: button;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 21px;
+
+  margin-top: 11px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    align-items: center;
+
+    margin-top: -14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
+
+    margin-top: -10px;
+  }
+}
+
+.checkout-form__note {
+  margin: 0;
+
+  line-height: 114%;
+  text-align: center;
+  color: $text-color-secondary;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 100%;
+    text-align: left;
+  }
+}

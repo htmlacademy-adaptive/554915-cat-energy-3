@@ -1,0 +1,13 @@
+.newsletters-form {
+  display: grid;
+  grid-template-areas:
+    "input"
+    "button";
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-areas: "input button";
+    grid-template-columns: 1fr 256px;
+  }
+}

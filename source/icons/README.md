@@ -45,3 +45,11 @@
   mask-image: url("../icons/stack.svg#search");
 }
 ```
+
+INLINE-svg. Указать путь до фрагмента стек-спрайта
+
+```html
+<svg width="25" height="25">
+  <use href="./icons/stack.svg#search" />
+</svg>
+```

@@ -1,0 +1,42 @@
+.textarea {
+  box-sizing: border-box;
+
+  display: flex;
+  width: 100%;
+  padding: 14px 15px;
+
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 113%;
+  text-transform: uppercase;
+  color: $text-color-primary;
+
+  outline: 1px solid $input-border-color;
+  border: none;
+  resize: vertical;
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  &:hover {
+    outline-color: $input-border-color-hover;
+  }
+
+  &:focus-visible {
+    outline-color: $input-border-color-focus;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 20px;
+
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+}

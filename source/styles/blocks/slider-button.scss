@@ -1,0 +1,64 @@
+.slider-button {
+  position: relative;
+
+  width: 4px;
+  height: 100%;
+  padding: 0;
+
+  border-radius: 2px;
+  border: none;
+  background-color: $icon-bg-color;
+
+  cursor: e-resize;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $icon-bg-color-focus;
+
+
+    &::after {
+      outline-color: $icon-bg-color-focus;
+    }
+  }
+
+  &:active {
+    background-color: rgba($icon-bg-color-focus, 0.6);
+
+    &::after {
+      outline-color: rgba($icon-bg-color-focus, 0.6);
+    }
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: calc(50% - 20px);
+    left: -18px;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: $bg-color-accent;
+    outline: 2px solid $icon-bg-color;
+    outline-offset: -2px;
+    border-radius: 100%;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: 5;
+    top: calc(50% - 9px);
+    left: calc(50% - 12px);
+
+    width: 24px;
+    height: 18px;
+
+    mask-image: url("./../../icons/slider-button.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: inherit;
+  }
+}
