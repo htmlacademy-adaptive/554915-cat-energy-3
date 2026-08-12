@@ -93,8 +93,6 @@
 
 .contacts__map-container {
   width: 100%;
-  min-width: 0;
-  overflow-x: hidden;
 
   @media (min-width: $desktop-width) {
     position: absolute;
