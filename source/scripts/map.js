@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const iconSize = isTablet ? [113, 106] : [57, 53];
     const iconOffset = isTablet ? [-56, -95] : [-26, -42];
 
-
     const myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
       iconLayout: 'default#image',
       iconImageHref: '../icons/stack.svg#icon-pin',

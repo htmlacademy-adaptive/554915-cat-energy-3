@@ -36,7 +36,6 @@
     padding: 60px 68px 59px 80px;
 
     background-color: $bg-color-accent;
-    box-shadow: 0 0 15px -3px #000000;
   }
 }
 
@@ -94,6 +93,8 @@
 
 .contacts__map-container {
   width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
 
   @media (min-width: $desktop-width) {
     position: absolute;
@@ -105,8 +106,11 @@
 }
 
 .contacts__ya-map {
-  width: 100%;
   height: 362px;
+
+  .ymaps-2-1-79-map {
+    width: 100% !important; /* stylelint-disable-line declaration-no-important */
+  }
 
   @media (min-width: $tablet-width) {
     height: 400px;
