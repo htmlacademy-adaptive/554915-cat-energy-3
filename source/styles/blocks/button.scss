@@ -14,10 +14,6 @@
   cursor: pointer;
   border: none;
 
-  &:active {
-    opacity: 0.3;
-  }
-
   &[disabled],
   &--disabled {
     opacity: 0.3;
@@ -33,6 +29,10 @@
   &:hover,
   &:focus-visible {
     background-color: $bg-color-special-2;
+  }
+
+  &:active {
+    color: rgba($text-color-accent, 0.3);
   }
 }
 
